@@ -4,66 +4,67 @@ CREATE DATABASE bamazon;
 
 USE bamazon;
 
-CREATE TABLE products
+create table products
 (
     item_id INT NOT NULL
     AUTO_INCREMENT,
-    product_name VARCHAR
-    (45) NULL,
-    department_name VARCHAR
-    (45) NULL,
-    price DECIMAL
-    (10,2) NULL,
-    stock_quantity INT NULL,
-    product_sales DECIMAL
-    (10,2) NULL,
-    PRIMARY KEY
+  product_name varchar
+    (100) NOT NULL,
+  department_name varchar
+    (100) NOT NULL,
+  price DECIMAL
+    (13, 4) NOT NULL,
+  stock_quantity INT NOT NULL,
+  primary key
     (item_id)
 );
 
-    CREATE TABLE departments
-    (
-        department_id INT NOT NULL
-        AUTO_INCREMENT,
-    department_name VARCHAR
-        (45) NOT NULL,
-    over_head_costs DECIMAL
-        (10,2),
-    PRIMARY KEY
-        (department_id)
-);
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("Apple Watch", "Electronics", 300.00, 13);
 
-        INSERT INTO departments
-            (department_name, over_head_costs)
-        VALUES
-            ("Electronics", 12000),
-            ("Clothing and Shoes", 4000),
-            ("Home and Garden and Kitchen", 8000),
-            ("Beauty and Health", 9000);
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("Fan", "Electronics", 45.99, 57);
 
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("Samsung TV", "Electronics", 399.99, 5);
 
-        INSERT INTO products
-            (product_name, department_name, price, stock_quantity, product_sales )
-        VALUES
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("Chair", "Home & Kitchen", 5.00, 100);
 
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("The Weeknd Shirt", "Clothing", 100.00, 10);
 
-        INSERT INTO products
-            (product_name, department_name, price, stock_quantity, product_sales )
-        VALUES
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("iPhone X", "Electronics", 1200.99, 10);
 
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("California King Bed", "Home & Kitchen", 2000.00, 3);
 
-        INSERT INTO products
-            (product_name, department_name, price, stock_quantity, product_sales )
-        VALUES
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("MacBook Air", "Electronics", 1500.00, 50);
 
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("Beats Wireless Headphones", "Electronics", 455.00, 76);
 
-        INSERT INTO products
-            (product_name, department_name, price, stock_quantity, product_sales )
-        VALUES
-
-
-        SELECT B. department_id, A.department_name, b.over_head_costs, SUM(A.product_sales) AS Total_Sales_By_Dept, SUM(A.product_sales) - B.over_head_costs AS Profit
-        FROM products A, departments B
-        WHERE a.department_name = b.department_name
-        GROUP BY department_name
-        ORDER BY department_id;
+    insert into products
+        (product_name, department_name, price, stock_quantity)
+    values
+        ("Air Pods", "Electronics", 150.00, 7);
