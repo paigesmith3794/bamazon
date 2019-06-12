@@ -36,6 +36,10 @@ CREATE TABLE products
         INSERT INTO departments
             (department_name, over_head_costs)
         VALUES
+            ("Electronics", 12000),
+            ("Clothing and Shoes", 4000),
+            ("Home and Garden and Kitchen", 8000),
+            ("Beauty and Health", 9000);
 
 
         INSERT INTO products
