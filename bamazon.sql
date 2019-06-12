@@ -68,3 +68,6 @@ create table products
         (product_name, department_name, price, stock_quantity)
     values
         ("Air Pods", "Electronics", 150.00, 7);
+
+    SELECT *
+    FROM bamazon.products;
