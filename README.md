@@ -1,7 +1,5 @@
 # bamazon
 
-I keep receiving an error for my sql connection, so this is the best I have to turn in.
-
 <h2>Node.js & MySQL</h2>
 
 <h2>Overview</h2>
